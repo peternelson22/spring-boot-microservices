@@ -1,0 +1,26 @@
+package com.nelson.productservice.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Product {
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private long productId;
+        private String productName;
+        private long price;
+        private long quantity;
+
+
+}
+
